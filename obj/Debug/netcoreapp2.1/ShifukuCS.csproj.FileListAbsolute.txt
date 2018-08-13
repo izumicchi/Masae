@@ -1,0 +1,11 @@
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\bin\Debug\netcoreapp2.1\ShifukuCS.deps.json
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\bin\Debug\netcoreapp2.1\ShifukuCS.runtimeconfig.json
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\bin\Debug\netcoreapp2.1\ShifukuCS.runtimeconfig.dev.json
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\bin\Debug\netcoreapp2.1\ShifukuCS.dll
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.csproj.CoreCompileInputs.cache
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.AssemblyInfoInputs.cache
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.AssemblyInfo.cs
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\bin\Debug\netcoreapp2.1\ShifukuCS.pdb
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.dll
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.pdb
+C:\Users\Kyousei Ningyou\Desktop\C# Projects\ShifukuCS\obj\Debug\netcoreapp2.1\ShifukuCS.csprojAssemblyReference.cache

@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "ShifukuCS": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SQLite.Interlop.dll": "LD_DEBUG"
+      }
+    },
+    "Masae": {
+      "commandName": "Executable",
+      "environmentVariables": {
+        "SQLite.Interlop.dll": "LD_DEBUG"
+      }
+    }
+  }
+}

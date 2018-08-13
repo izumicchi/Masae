@@ -1,0 +1,67 @@
+{
+  "help": {
+    "Title": "**help / h**",
+    "Description": "Looks up usage of a specific command.",
+    "Usage": "Usage",
+    "Usage1": "`help <command>` or `help`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  },
+
+  "h": {
+    "Title": "**help / h**",
+    "Description": "Looks up usage of a specific command.",
+    "Usage": "Usage",
+    "Usage1": "`help <command>` or `help`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  },
+
+  "mods": {
+    "Title": "**mods**",
+    "Description": "Gets all of the moderators and sorts them by playing status.",
+    "Usage": "Usage",
+    "Usage1": "`mods`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  },
+
+  "xp": {
+    "Title": "**xp / exp / experience**",
+    "Description": "Loads your or other user's XP card.",
+    "Usage": "Usage",
+    "Usage1": "`xp` or `xp @user`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  },
+
+  "exp": {
+    "Title": "**xp / exp / experience**",
+    "Description": "Loads your or other user's XP card.",
+    "Usage": "Usage",
+    "Usage1": "`xp` or `xp @user`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  },
+
+  "experience": {
+    "Title": "**xp / exp / experience**",
+    "Description": "Loads your or other user's XP card.",
+    "Usage": "Usage",
+    "Usage1": "`xp` or `xp @user`",
+    "UPerms": "User Permissions",
+    "UPerms1": "None",
+    "BPerms": "Bot Permissions",
+    "BPerms1": "None"
+  }
+}

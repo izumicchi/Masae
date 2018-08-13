@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <StartupObject></StartupObject>
+    <Company />
+    <Authors>izumi</Authors>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon />
+    <Win32Resource />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Modules\Administrator\**" />
+    <EmbeddedResource Remove="Modules\Administrator\**" />
+    <None Remove="Modules\Administrator\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="2.0.0-beta" />
+    <PackageReference Include="Discord.Net.Commands" Version="2.0.0-beta" />
+    <PackageReference Include="Discord.Net.Core" Version="2.0.0-beta" />
+    <PackageReference Include="Discord.Net.Rpc" Version="1.0.2" />
+    <PackageReference Include="Discord.Net.WebSocket" Version="2.0.0-beta" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="SixLabors.Core" Version="1.0.0-beta0006" />
+    <PackageReference Include="SixLabors.Fonts" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0005" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0005" />
+    <PackageReference Include="SixLabors.ImageSharp.Web" Version="1.0.0-beta0003" />
+    <PackageReference Include="SixLabors.Shapes" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.Shapes.Text" Version="1.0.0-beta0007" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.0-alpha.281" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Database\" />
+    <Folder Include="Data\Images\Avatars\" />
+    <Folder Include="Data\Images\CustomBGs\" />
+  </ItemGroup>
+
+</Project>
