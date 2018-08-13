@@ -1,2 +1,4 @@
 # Masae
-Open-source C# bot
+Open-source C# bot.
+
+WIP
