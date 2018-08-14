@@ -55,7 +55,7 @@ namespace Masae
             //    Console.WriteLine($"The database {_db.nameof} already exists!");
             //    Console.WriteLine($"{e}");
             //}
-            await _client.LoginAsync(TokenType.Bot, "NDc4NjMyMTY5OTM0MTU5ODc4.DlNgew.emnsMh_kVQ3K2sKg2bcEEQsU-wc");
+            await _client.LoginAsync(TokenType.Bot, "");
             Console.ForegroundColor = ConsoleColor.White;
             await _client.StartAsync();
             Console.WriteLine("Logged in!");
