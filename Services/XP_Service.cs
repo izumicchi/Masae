@@ -65,7 +65,7 @@ namespace Masae.Services
                         }
                         else
                         {
-                            
+                            GetDefValues();
                             var time = s.Timestamp.UtcDateTime - DateTime.UtcNow;
                             if (time.TotalMilliseconds > int.MaxValue)
                                 return;
