@@ -82,13 +82,7 @@ namespace Masae.Services
         {
             var _dbcon = new SqliteConnection($"Data Source=Data/Database/Masae.db");
             _dbcon.Open();
-            string getfirst = $"SELECT XP, LEVEL FROM XPStats WHERE UserID = {ran_by_id}";
-            var Get = _dbcon.CreateCommand();
-            Get.CommandText = getfirst;
-            SqliteDataReader Read = Get.ExecuteReader();
-            Read.Read();
-            got_from_db_xp = Int32.Parse(Read[0].ToString());
-            got_from_db_level = Int32.Parse(Read[1].ToString());
+            Initialize();
             GetDefVal();
 
             insert_in_db_xp = got_from_db_xp + 3;
@@ -123,6 +117,17 @@ namespace Masae.Services
             Reader.Read();
             basexp = Int32.Parse(Reader[0].ToString());
             multiplier = Int32.Parse(Reader[1].ToString());
+        }
+        
+        void Initialize()
+        {
+            string getfirst = $"SELECT XP, LEVEL FROM XPStats WHERE UserID = {ran_by_id}";
+            var Get = _dbcon.CreateCommand();
+            Get.CommandText = getfirst;
+            SqliteDataReader Read = Get.ExecuteReader();
+            Read.Read();
+            got_from_db_xp = Int32.Parse(Read[0].ToString());
+            got_from_db_level = Int32.Parse(Read[1].ToString());
         }
 
         public void MakeSelfIfNone()
