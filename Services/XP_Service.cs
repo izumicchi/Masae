@@ -24,12 +24,7 @@ namespace Masae.Services
         private CommandService _service;
         private DbService _db;
 
-        public ulong id = 0;
         public int basexp = 0;
-        public ulong ran_by_id = 0;
-        public int got_from_db_xp = 0;
-        public int got_from_db_level = 0;
-        public int level_up = 0;
 
         public XP_Service(DiscordSocketClient client)
         {
@@ -65,7 +60,6 @@ namespace Masae.Services
                         }
                         else
                         {
-                            GetDefValues();
                             var time = s.Timestamp.UtcDateTime - DateTime.UtcNow;
                             if (time.TotalMilliseconds > int.MaxValue)
                                 return;
@@ -89,18 +83,6 @@ namespace Masae.Services
                     }
                 }
             }
-        }
-
-        public void GetDefValues()
-        {
-            var _dbcon = new SqliteConnection("Data Source=Data/Database/Masae.db");
-            
-            string query = $@"SELECT * FROM XPConfig";
-            var getto = _dbcon.CreateCommand();
-            getto.CommandText = query;
-            SqliteDataReader read = getto.ExecuteReader();
-            read.Read();
-            basexp = Int32.Parse(read[0].ToString());
         }
         
         private void UpdateXp(object xpobj)
