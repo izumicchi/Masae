@@ -47,6 +47,10 @@ namespace Masae.Services
             var XPCfg = _dbcon.CreateCommand();
             XPCfg.CommandText = XPConfig;
             XPCfg.ExecuteNonQuery();
+            
+            var XPDefCfg = _dbcon.CreateCommand();
+            XPDefCfg.CommandText = XPDefConfig;
+            XPDefCfg.ExecuteNonQuery();
             _dbcon.Close();
         }
 
