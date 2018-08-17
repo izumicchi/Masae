@@ -101,6 +101,7 @@ namespace Masae.Services
             SqliteDataReader read = getto.ExecuteReader();
             read.Read();
             basexp = Int32.Parse(read[0].ToString());
+        }
         
         private void UpdateXp(object xpobj)
         {
