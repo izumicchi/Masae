@@ -16,6 +16,7 @@ namespace Masae.Services
         public const string BotConfigSql = @"CREATE TABLE IF NOT EXISTS BotConfig (Prefix TEXT)";
         public const string XPSql = @"CREATE TABLE IF NOT EXISTS XPStats (UserID INTEGER, XP INTEGER, LEVEL INTEGER)";
         public const string XPBGSql = @"CREATE TABLE IF NOT EXISTS XPBgs (UserID INTEGER, BGID INTEGER, BGPATH TEXT)";
+        public const string XPConfig = @"CREATE TABLE IF NOT EXISTS XPConfig (basexp INTEGER, multiplier INTEGER)";
         public string prefix_from_db = "";
 
         public int basexp = 35;
@@ -41,6 +42,10 @@ namespace Masae.Services
             var XPBackgrounds = _dbcon.CreateCommand();
             XPBackgrounds.CommandText = XPBGSql;
             XPBackgrounds.ExecuteNonQuery();
+            
+            var XPCfg = _dbcon.CreateCommand();
+            XPCfg.CommandText = XPConfig;
+            XPCfg.ExecuteNonQuery();
             _dbcon.Close();
         }
 
