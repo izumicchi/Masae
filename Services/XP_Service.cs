@@ -70,10 +70,10 @@ namespace Masae.Services
                             if (time.TotalMilliseconds > int.MaxValue)
                                 return;
 
-                            if (time.TotalMilliseconds < 0)
+                            if (time.TotalMinutes < 0)
                                 time = TimeSpan.FromMinutes(1);
 
-                            var timer = new Timer(UpdateXp, s, (int)time.TotalMilliseconds, Timeout.Infinite);
+                            var timer = new Timer(UpdateXp, s, (int)time.TotalMinutes, Timeout.Infinite);
                         }
                     }
                     catch
