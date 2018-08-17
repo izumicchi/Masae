@@ -23,7 +23,6 @@ namespace Masae.Services
         private DiscordSocketClient _client;
         private CommandService _service;
         private DbService _db;
-        public Task GiveXpTask;
 
         public ulong id = 0;
         public int basexp = 35;
