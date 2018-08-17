@@ -24,8 +24,6 @@ namespace Masae.Services
         private CommandService _service;
         private DbService _db;
 
-        public int basexp = 0;
-
         public XP_Service(DiscordSocketClient client)
         {
             _client = client;
@@ -38,8 +36,7 @@ namespace Masae.Services
         public async Task GXP(SocketMessage s)
         {
             var msg = s as SocketUserMessage;
-            ran_by_id = msg.Author.Id;
-            _db.ran_by_id = ran_by_id;
+            _db.ran_by_id = msg.Author.Id;
             if (msg.Channel is IDMChannel)
             {
                 return;
