@@ -17,6 +17,7 @@ namespace Masae.Services
         public const string XPSql = @"CREATE TABLE IF NOT EXISTS XPStats (UserID INTEGER, XP INTEGER, LEVEL INTEGER)";
         public const string XPBGSql = @"CREATE TABLE IF NOT EXISTS XPBgs (UserID INTEGER, BGID INTEGER, BGPATH TEXT)";
         public const string XPConfig = @"CREATE TABLE IF NOT EXISTS XPConfig (basexp INTEGER, multiplier INTEGER)";
+        public const string XPDefConfig = $@"INSERT INTO XPConfig (basexp, multiplier) VALUES ({35}, {4})";
         public string prefix_from_db = "";
 
         public int basexp = 35;
