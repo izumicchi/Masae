@@ -20,12 +20,13 @@ namespace Masae.Services
         public const string XPDefConfig = $@"INSERT INTO XPConfig (basexp, multiplier) VALUES ({35}, {4})";
         public string prefix_from_db = "";
 
-        public int basexp = 35;
+        public int basexp = 0;
         public ulong ran_by_id = 0;
         public int got_from_db_xp = 0;
         public int insert_in_db_xp = 0;
         public int got_from_db_level = 0;
         public int level_up = 0;
+        public int multiplier = 0;
 
         public void CreateTables()
         {
@@ -88,9 +89,10 @@ namespace Masae.Services
             Read.Read();
             got_from_db_xp = Int32.Parse(Read[0].ToString());
             got_from_db_level = Int32.Parse(Read[1].ToString());
+            GetDefVal();
 
             insert_in_db_xp = got_from_db_xp + 3;
-            var required = (int)(basexp / 4 * got_from_db_level);
+            var required = (int)(basexp / multiplier * got_from_db_level);
             var current = (int)(got_from_db_xp);
             if (current >= required)
             {
@@ -111,6 +113,16 @@ namespace Masae.Services
                 SetXP.CommandText = $"UPDATE XPStats SET XP = {insert_in_db_xp} WHERE UserID = {ran_by_id}";
                 SetXP.ExecuteNonQuery();
             }
+        }
+        
+        void GetDefVal()
+        {
+            var getit = _dbcon.CreateCommand();
+            getit.CommandText = $@"SELECT * FROM XPConfig";
+            SqliteDataReader Reader = getit.ExecuteReader();
+            Reader.Read();
+            basexp = Int32.Parse(Reader[0].ToString());
+            multiplier = Int32.Parse(Reader[1].ToString());
         }
 
         public void MakeSelfIfNone()
